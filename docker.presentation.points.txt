@@ -1,3 +1,40 @@
+HyperV
+	Mostly BIOS tick
+	Can find it in search: HyperV
+
+- Commands: docker version (client & server) --> making sure we can talk to engine
+			docker info
+			docker (list of commands & management commands)
+				old: docker <command> (options)
+				new: docker <command> <sub-command> (options)
+				
+docker container --publish 80:80 (--detach) nginx
+	(new instance)(port host:dest)(background)(image)
+
+docker container ls (all active containers)
+	(old) docker ps
+docker container ls -a (all containers active / stopped)
+docker container top (containerId) --> processes in container
+docker container rm -f fe617a2c4d28 fc410066fe66 4e6309902e75 (remove all ids)
+curl localhost (to check if nginx is running)
+
+where default name come from? scientest and hackers
+
+breakdown of docker container run
+	* look for image in cache
+	* look for image in remote repository (hub)
+	* download the latest image
+	* create new container based upon that image
+	* gives it new IP on a private network inside docker engine
+	* if publish --> maps host to container port
+	
+Containers aren't mini-VMs, they are processes
+
+docker container stop $(docker container ls -a -q)
+docker image rm $(docker image ls -a -q)
+=============================================================================================
+
+
 docker container top -process list in one container
 docker container inspect -details of one container configurations
 docker	container states -perf states for all containers
