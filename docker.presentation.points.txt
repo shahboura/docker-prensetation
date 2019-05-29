@@ -1,0 +1,23 @@
+docker container top -process list in one container
+docker container inspect -details of one container configurations
+docker	container states -perf states for all containers
+
+docker container run -it --> start new container interactively
+docker container exec -it --> run additional comand in existing container
+docker container start -ai <containerId>
+
+container lifetime is as long as the initial command is
+
+Networks CLI management
+It's better to have virtual network per domain
+containers sharing same VN see each other --> see bookmark in section 3 lecture 28 
+docker container port <containerId>
+docker network ls
+docker network inspect <networkId>
+--network host option allocate it on host nework
+	con: prevents security boundry of containerization
+	pro: high network throuput
+docker network create <network_name>
+docker network connect
+docker network disconnect
+docker networks default security --> Lecture 30 bookmark
