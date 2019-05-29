@@ -58,3 +58,47 @@ docker network create <network_name>
 docker network connect
 docker network disconnect
 docker networks default security --> Lecture 30 bookmark
+
+
+==========================================================================
+Glossary:
+–	Image: images are immutable
+–	Dockerfile: Text file contains instruction how to build a Docker image
+–	Build: the actual build command (docker file as input)
+–	Compose (YAML): more advanced command for composing images
+–	Container: instance of Docker image
+–	Multi-stage Build: compilation SDK vs runtime
+–	Repository: Collection of related images and their variants
+–	SDKs (heavy)
+–	Runtimes (light)
+–	Platform (Win / Linux)
+–	 Registry: Service to access repositories. i.e. DockerHub
+–	Cluster: collection of Docker hosts exposed as single docker host
+–	Orchestrator: tool simplifying management of clusters / docker hosts
+–	Kubernetes
+–	AzureServiceFabric
+–	Docker Swarm
+–	…
+
+Useful illustrations:
+–	Page 4 (host vs containers)
+–	Page 6 (VM VS Docker)
+–	Page 10 (docker ops lifecycle)
+
+Docker images compatibility with hosts:
+–	Linux image can run on Windows & Linux
+–	Windows image can run on Windows
+Dev environment
+–	Can create images for Linux containers
+–	Can create images for Windows & Linux containers 
+
+Benefits of Docker:
+–	Isolation
+–	Env isolation between dev and ops
+–	Portability
+–	Scalability
+–	Consistency
+
+Ideas:
+–	The full picture
+==================================================================================
